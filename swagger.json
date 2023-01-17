@@ -1,0 +1,167 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Hunters Helper",
+    "description": "Hunters Helper",
+    "version": "1.0.0"
+  },
+  "host": "huntershelp.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/calibre/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cartridgeName": {
+                  "example": "any"
+                },
+                "calibre": {
+                  "example": "any"
+                },
+                "bulletWeight": {
+                  "example": "any"
+                },
+                "muzzleVelocity": {
+                  "example": "any"
+                },
+                "bulletEnergyAtMuzzle": {
+                  "example": "any"
+                },
+                "bulletMomentumAtMuzzle": {
+                  "example": "any"
+                },
+                "bulletSectionalDensity": {
+                  "example": "any"
+                },
+                "recoilEnergy": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/calibre/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "cartridgeName": {
+                  "example": "any"
+                },
+                "calibre": {
+                  "example": "any"
+                },
+                "bulletWeight": {
+                  "example": "any"
+                },
+                "muzzleVelocity": {
+                  "example": "any"
+                },
+                "bulletEnergyAtMuzzle": {
+                  "example": "any"
+                },
+                "bulletMomentumAtMuzzle": {
+                  "example": "any"
+                },
+                "bulletSectionalDensity": {
+                  "example": "any"
+                },
+                "recoilEnergy": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

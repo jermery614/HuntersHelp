@@ -4,8 +4,8 @@
         "calibre": "264",
         "bulletWeight": "142",
         "muzzleVelocity": "2700 ",
-        "bulletEnergy@muzzle": "2298.1",
-        "bulletMomentum@muzzle": "54.8",
+        "bulletEnergyAtMuzzle": "2298.1",
+        "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
         "recoilEnergy": "12.41"
 
@@ -15,8 +15,8 @@
         "calibre": "264",
         "bulletWeight": "142",
         "muzzleVelocity": "2700 ",
-        "bulletEnergy@muzzle": "2298.1",
-        "bulletMomentum@muzzle": "54.8",
+        "bulletEnergyAtMuzzle": "2298.1",
+        "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
         "recoilEnergy": "12.41"
 
@@ -26,8 +26,8 @@
         "calibre": "264",
         "bulletWeight": "142",
         "muzzleVelocity": "2700 ",
-        "bulletEnergy@muzzle": "2298.1",
-        "bulletMomentum@muzzle": "54.8",
+        "bulletEnergyAtMuzzle": "2298.1",
+        "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
         "recoilEnergy": "12.41"
 
