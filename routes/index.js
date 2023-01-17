@@ -1,11 +1,17 @@
-const routes = require('express').Router();
+const express = require('express')
+const router = express.Router();
 
-routes.get('/', (req, res) => {
-  res.send('Anna Wheeler');
-});
+router.use('/calibre', require('./calibre'))
 
-routes.get('/test', (req, res) => {
-    res.send('Jermery Wheeler');
-});
 
-module.exports = routes;
+
+
+// routes.get('/', (req, res) => {
+//   res.send('Anna Wheeler');
+// });
+
+// routes.get('/test', (req, res) => {
+//     res.send('Jermery Wheeler');
+// });
+
+module.exports = router;
