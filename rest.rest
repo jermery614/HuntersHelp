@@ -1,4 +1,4 @@
-
+//Localhost Rest
 GET http://localhost:8080/calibre HTTP/1.1
 ###
 GET http://localhost:8080/calibre/63c6e41dc4a935a8d141c7e6 HTTP/1.1
@@ -22,19 +22,18 @@ Content-Type: application/json
 }
 ###
 
-
-PUT http://localhost:8080/calibre/63c6f16dc93504ce96831e48 HTTP/1.1
+PUT http://localhost:8080/calibre/63c6e41dc4a935a8d141c7e6 HTTP/1.1
 Content-Type: application/json
 
 {
-    "cartridgeName": "308Win",
-    "calibre": "308",
-    "bulletWeight": "150",
-    "muzzleVelocity": "2980",
-    "bulletEnergyAtMuzzle": "2957.2",
-    "bulletMomentumAtMuzzle": "63.9",
-    "bulletSectionalDensity": "0.226",
-    "recoilEnergy": "16.60"
+    "cartridgeName": "223 Rem",
+    "calibre": ".223",
+    "bulletWeight": "55",
+    "muzzleVelocity": "3400",
+    "bulletEnergyAtMuzzle": "1411.5",
+    "bulletMomentumAtMuzzle": "26.7",
+    "bulletSectionalDensity": "0.157",
+    "recoilEnergy": "3.27"
 }
 ###
 DELETE http://localhost:8080/calibre/
@@ -43,12 +42,44 @@ DELETE http://localhost:8080/calibre/
 
 
 ###
-//production
+//production Rest
 GET https://huntershelp.onrender.com/calibre HTTP/1.1
 ###
 GET https://huntershelp.onrender.com/calibre/63c6e41dc4a935a8d141c7e6 HTTP/1.1
 ###
-GET https://huntershelp.onrender.com/calibre/63c6e41dc4a935a8d141c7e7 HTTP/1.1
+GET https://huntershelp.onrender.com/calibre/63c6f16dc93504ce96831e48 HTTP/1.1
 ###
 GET https://huntershelp.onrender.com/calibre/63c6e41dc4a935a8d141c7e8 HTTP/1.1
 ###
+POST https://huntershelp.onrender.com/calibre HTTP/1.1
+Content-Type: application/json
+
+{
+    "cartridgeName": "8x57 Mauser",
+    "calibre": ".323",
+    "bulletWeight": "198",
+    "muzzleVelocity": "2460",
+    "bulletEnergyAtMuzzle": "2666.0",
+    "bulletMomentumAtMuzzle": "69.6",
+    "bulletSectionalDensity": "0.271",
+    "recoilEnergy": "12.68"
+}
+###
+PUT https://huntershelp.onrender.com/calibre/63c6f687041433b73b50d232 HTTP/1.1
+Content-Type: application/json
+
+
+    {
+    "cartridgeName": "8x57 Mauser",
+    "calibre": ".323",
+    "bulletWeight": "198",
+    "muzzleVelocity": "2460.6",
+    "bulletEnergyAtMuzzle": "2666.0",
+    "bulletMomentumAtMuzzle": "69.6",
+    "bulletSectionalDensity": "0.271",
+    "recoilEnergy": "12.68"
+}
+
+###
+DELETE https://huntershelp.onrender.com/calibre/63c6f687041433b73b50d232 HTTP/1.1
+
