@@ -7,7 +7,8 @@
         "bulletEnergyAtMuzzle": "2298.1",
         "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
-        "recoilEnergy": "12.41"
+        "recoilEnergy": "12.41",
+        "game": "Deer"
 
     },
     "cartridge2": {
@@ -18,7 +19,9 @@
         "bulletEnergyAtMuzzle": "2298.1",
         "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
-        "recoilEnergy": "12.41"
+        "recoilEnergy": "12.41",
+        "game": "Elk"
+
 
     },
     "cartridge3": {
@@ -29,7 +32,8 @@
         "bulletEnergyAtMuzzle": "2298.1",
         "bulletMomentumAtMuzzle": "54.8",
         "bulletSectionalDensity": "0.291",
-        "recoilEnergy": "12.41"
+        "recoilEnergy": "12.41",
+        "game": "coyote"
 
     }
 }

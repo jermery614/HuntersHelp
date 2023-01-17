@@ -31,7 +31,8 @@ const createCalibre = async (req, res) => {
     bulletEnergyAtMuzzle: req.body.bulletEnergyAtMuzzle,
     bulletMomentumAtMuzzle: req.body.bulletMomentumAtMuzzle,
     bulletSectionalDensity: req.body.bulletSectionalDensity,
-    recoilEnergy: req.body.recoilEnergy
+    recoilEnergy: req.body.recoilEnergy,
+    game: req.body.game
   };
   const response = await mongodb.getDb().db("hunters").collection('calibre').insertOne(calibre);
   if (response.acknowledged) {
@@ -51,7 +52,8 @@ const updateCalibre = async (req, res) => {
     bulletEnergyAtMuzzle: req.body.bulletEnergyAtMuzzle,
     bulletMomentumAtMuzzle: req.body.bulletMomentumAtMuzzle,
     bulletSectionalDensity: req.body.bulletSectionalDensity,
-    recoilEnergy: req.body.recoilEnergy
+    recoilEnergy: req.body.recoilEnergy,
+    game: req.body.game
     
     
   };
