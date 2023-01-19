@@ -5,10 +5,10 @@
     "description": "Hunters Helper",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "huntershelp.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/calibre/": {
@@ -55,6 +55,9 @@
                   "example": "any"
                 },
                 "recoilEnergy": {
+                  "example": "any"
+                },
+                "game": {
                   "example": "any"
                 }
               }
@@ -128,6 +131,9 @@
                   "example": "any"
                 },
                 "recoilEnergy": {
+                  "example": "any"
+                },
+                "game": {
                   "example": "any"
                 }
               }
