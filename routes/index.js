@@ -28,16 +28,16 @@ function userPerson(person) {
    
 
 };
-// const p = {
-//     age:22,
-// }
-// userPerson(p)
-
-
-const p1 = {
-    age:12,
+const p = {
+    age:22,
 }
-userPerson(p1)
+userPerson(p)
+
+
+// const p1 = {
+//     age:12,
+// }
+// userPerson(p1)
 
 
 module.exports = router;
