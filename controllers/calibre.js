@@ -1,6 +1,9 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
+
+
+
 const getAll = async (req, res, next) => {
   const result = await mongodb.getDb().db('hunters').collection('calibre').find();
   result.toArray().then((lists) => {
@@ -33,7 +36,9 @@ const createCalibre = async (req, res) => {
     bulletSectionalDensity: req.body.bulletSectionalDensity,
     recoilEnergy: req.body.recoilEnergy,
     game: req.body.game
+    // age:req.body.age
   };
+
   const response = await mongodb.getDb().db("hunters").collection('calibre').insertOne(calibre);
   if (response.acknowledged) {
     res.status(201).json(response);
@@ -54,6 +59,7 @@ const updateCalibre = async (req, res) => {
     bulletSectionalDensity: req.body.bulletSectionalDensity,
     recoilEnergy: req.body.recoilEnergy,
     game: req.body.game
+    // age:req.body.age
     
     
   };
