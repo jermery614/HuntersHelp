@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
@@ -13,7 +14,11 @@ const getAll = async (req, res, next) => {
 };
 
 const getSingle = async (req, res, next) => {
-  const userId = new ObjectId(req.params.id);
+  if (req.params.id==null){
+    return res.status(400).json({error: 'Need Id to process request.'})
+  }
+  try{
+    const userId = new ObjectId(req.params.id);
   const result = await mongodb
     .getDb()
     .db('hunters')
@@ -23,9 +28,17 @@ const getSingle = async (req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
   });
+  } catch(error){
+    res.status(400).json({error: 'Error:'+error})
+  }
+  
 };
 // creating contact method to add to the database.
 const createCalibre = async (req, res) => {
+  const errors = validationResult(req)
+  if (!errors.isEmpty()){
+    return res.status(422).json({errors: errors.array()})
+  }
   const calibre = {
     cartridgeName: req.body.cartridgeName,
     calibre: req.body.calibre,

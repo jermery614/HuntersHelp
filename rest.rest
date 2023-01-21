@@ -19,7 +19,9 @@ Content-Type: application/json
     "bulletMomentumAtMuzzle": "6.1",
     "bulletSectionalDensity": "0.074",
     "recoilEnergy": "0.10",
-    "game": "Small Game(short and medium range)"
+    "game": "Small Game(short and medium range)",
+    "age": 12
+    
 }
 ###
 
