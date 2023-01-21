@@ -68,7 +68,7 @@ function userPerson(person) {
 
 };
 const p = {
-    age:12,
+    age:22,
 }
 userPerson(p)
 
