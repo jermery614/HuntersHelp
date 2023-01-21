@@ -47,11 +47,11 @@ DELETE http://localhost:8080/calibre/
 //production Rest
 GET https://huntershelp.onrender.com/calibre HTTP/1.1
 ###
-GET https://huntershelp.onrender.com/calibre/ HTTP/1.1
+GET https://huntershelp.onrender.com/calibre/63c71366c4a935a8d141c7ec HTTP/1.1
 ###
-GET https://huntershelp.onrender.com/calibre/ HTTP/1.1
+GET https://huntershelp.onrender.com/calibre/63c71366c4a935a8d141c7ed HTTP/1.1
 ###
-GET https://huntershelp.onrender.com/calibre/ HTTP/1.1
+GET https://huntershelp.onrender.com/calibre/63c717524147be778e962ef4 HTTP/1.1
 ###
 POST https://huntershelp.onrender.com/calibre HTTP/1.1
 Content-Type: application/json
