@@ -17,12 +17,13 @@
         "produces": [
           "application/json"
         ],
+        
         "parameters": [
           {
-            "name":"age",
+            "name": "age",
             "in": "path",
             "required":true,
-            "type": "object"
+            "type":"string"
           }
         ],
         "responses": {
