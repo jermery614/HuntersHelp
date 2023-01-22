@@ -17,25 +17,12 @@
         "produces": [
           "application/json"
         ],
-        
         "parameters": [
           {
-            "name": "age",
-            "in": "path",
-            "required":false,
-            "type":"number"
-          }, 
-          {
-            "name":"body",
-            "in":"body",
-            "schema":{
-              "type":"number",
-              "properties":{
-                "age":{
-                  "example": "any"
-                }
-              }
-            }
+            "name":"id",
+            "in":"path",
+            "required":true,
+            "type": "string"
           }
         ],
         "responses": {
