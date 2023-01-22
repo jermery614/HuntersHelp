@@ -22,8 +22,7 @@
             "name":"age",
             "in": "path",
             "required":true,
-            "type": "integer",
-            "format": "int32"
+            "type": "number"
           }
         ],
         "responses": {
