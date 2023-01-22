@@ -23,7 +23,7 @@
             "name": "age",
             "in": "path",
             "required":false,
-            "type":"string"
+            "type":"number"
           }, 
           {
             "name":"body",
