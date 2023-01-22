@@ -22,7 +22,7 @@
             "name":"age",
             "in": "path",
             "required":true,
-            "type": "number"
+            "type": "object"
           }
         ],
         "responses": {
