@@ -6,20 +6,35 @@ const ObjectId = require('mongodb').ObjectId;
 
 
 const getAll = async (req, res, next) => {
-  const result = await mongodb.getDb().db('hunters').collection('calibre').find();
+  const errors = validationResult(req)
+  if (!errors.isEmpty()){
+    return res.status(422).json({ errors:errors.array()})
+  }
+
+  try {
+    const result = await mongodb.getDb().db('hunters').collection('calibre').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
+  } catch (error) {
+     res.status(400).json({error: 'Error:'+error})
+  }
+  
 };
 
 const getSingle = async (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()){
+    return res.status(422).json({errors: errors.array()})
+  }
+  
   if (req.params.id==null){
     return res.status(400).json({error: 'Need Id to process request.'})
   }
   try{
     const userId = new ObjectId(req.params.id);
-  const result = await mongodb
+    const result = await mongodb
     .getDb()
     .db('hunters')
     .collection('calibre')
@@ -35,10 +50,11 @@ const getSingle = async (req, res, next) => {
 };
 // creating contact method to add to the database.
 const createCalibre = async (req, res) => {
-  const errors = validationResult(req)
+  const errors = validationResult(req);
   if (!errors.isEmpty()){
     return res.status(422).json({errors: errors.array()})
   }
+  
   const calibre = {
     cartridgeName: req.body.cartridgeName,
     calibre: req.body.calibre,
@@ -49,7 +65,7 @@ const createCalibre = async (req, res) => {
     bulletSectionalDensity: req.body.bulletSectionalDensity,
     recoilEnergy: req.body.recoilEnergy,
     game: req.body.game
-    // age:req.body.age
+  
   };
 
   const response = await mongodb.getDb().db("hunters").collection('calibre').insertOne(calibre);
@@ -61,6 +77,10 @@ const createCalibre = async (req, res) => {
 };
 
 const updateCalibre = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()){
+    return res.status(422).json({errors: errors.array()})
+  }
   const userId = new ObjectId(req.params.id);
   const calibre = {
     cartridgeName: req.body.cartridgeName,
@@ -72,8 +92,6 @@ const updateCalibre = async (req, res) => {
     bulletSectionalDensity: req.body.bulletSectionalDensity,
     recoilEnergy: req.body.recoilEnergy,
     game: req.body.game
-    // age:req.body.age
-    
     
   };
   const response = await mongodb
@@ -90,6 +108,11 @@ const updateCalibre = async (req, res) => {
 };
 
 const deleteCalibre = async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()){
+    return res.status(422).json({errors: errors.array()})
+  }
+  
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db("hunters").collection('calibre').remove({ _id: userId }, true);
   console.log(response);
