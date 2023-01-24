@@ -35,7 +35,7 @@ app.get('/oauth-callback', ({ query: { code } }, res) => {
       } else {
         console.log('Got it!')
         // res.redirect('http://localhost:8080');
-        app.use('/', require('./routes'));
+        // app.use('/', require('./routes'));
       }
       res.redirect(`/?token=${token}`);
       
@@ -49,7 +49,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-// app.use('/', require('./routes'));
+app.use('/', require('./routes'));
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
