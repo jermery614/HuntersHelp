@@ -4,6 +4,7 @@ const mongodb = require('./db/connect');
 
 const port = process.env.PORT || 8080;
 const app = express();
+const axios = require('axios');
 
 app.use(express.static('static'));
 app.get('/', (req, res)=>{
@@ -29,7 +30,16 @@ app.get('/oauth-callback', ({ query: { code } }, res) => {
       // eslint-disable-next-line no-console
       console.log('My token:', token);
 
+      if (!token === null){
+        console.log('Hello')
+      } else {
+        console.log('Got it!')
+        // res.redirect('http://localhost/calibre');
+      }
       res.redirect(`/?token=${token}`);
+      app.use('/', require('./routes'));
+        // res.redirect('/calibre')
+
     })
     .catch((err) => res.status(500).json({ err: err.message }));
 });
@@ -38,7 +48,7 @@ app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-app.use('/', require('./routes'));
+// app.use('/', require('./routes'));
 
 mongodb.initDb((err, mongodb) => {
   if (err) {
