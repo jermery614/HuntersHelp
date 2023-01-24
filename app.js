@@ -34,10 +34,11 @@ app.get('/oauth-callback', ({ query: { code } }, res) => {
         console.log('Hello')
       } else {
         console.log('Got it!')
-        // res.redirect('http://localhost/calibre');
+        // res.redirect('http://localhost:8080');
+        app.use('/', require('./routes'));
       }
       res.redirect(`/?token=${token}`);
-      app.use('/', require('./routes'));
+      
         // res.redirect('/calibre')
 
     })
