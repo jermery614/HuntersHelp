@@ -1,4 +1,5 @@
 const { check } = require('express-validator');
+const {tokenCheck} = require('axios');
  
 // exports.signupValidation = [
 //     check('name', 'Name is requied').not().isEmpty(),
@@ -14,6 +15,16 @@ exports.ageValidation = [
      })
  
 ]
+
+// exports.gotToken = [ 
+
+//    tokenCheck('token', 'Please login').not().isEmpty(),
+//    tokenCheck('token', 'You need a token to access this site.').custom((value)=>{
+//       if (value === null) throw new Error('You must have a vaild token to access this site.');
+//       return true
+//    })
+
+// ]
 
 // exports.ageUpdate = [
 //     check('age', 'Please enter your age').not().isEmpty(),

@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const calibreController = require('../controllers/calibre');
+const { ageValidation } = require('../utils/validation');
 // const {ageValidation}= require('../utils/validation');
 
 //normal functions
@@ -11,10 +12,10 @@ const calibreController = require('../controllers/calibre');
 // router.delete('/:id',ageValidation, calibreController.deleteCalibre);
 
 // Testing Oauth
-router.get('/', calibreController.getAll);
-router.get('/:id', calibreController.getSingle);
-router.post('/' ,calibreController.createCalibre);
-router.put('/:id', calibreController.updateCalibre);
-router.delete('/:id', calibreController.deleteCalibre);
+router.get('/', ageValidation, calibreController.getAll);
+router.get('/:id', ageValidation, calibreController.getSingle);
+router.post('/' , ageValidation, calibreController.createCalibre);
+router.put('/:id', ageValidation, calibreController.updateCalibre);
+router.delete('/:id', ageValidation, calibreController.deleteCalibre);
 
 module.exports = router;

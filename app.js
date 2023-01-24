@@ -30,7 +30,7 @@ app.get('/oauth-callback', ({ query: { code } }, res) => {
       // eslint-disable-next-line no-console
       console.log('My token:', token);
 
-      if (!token === null){
+      if (token === null){
         console.log('Hello')
       } else {
         console.log('Got it!')
@@ -48,7 +48,8 @@ app.use(bodyParser.json())
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
-  })
+  });
+  
 app.use('/', require('./routes'));
 
 mongodb.initDb((err, mongodb) => {
