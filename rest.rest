@@ -55,7 +55,7 @@ Content-Type: application/json
     "age": 18
   }
 ###
-DELETE http://localhost:8080/calibre/63d1fb7ef815d49a9833d161
+DELETE http://localhost:8080/calibre/63d1fee0f815d49a9833d162
 Content-Type: application/json
 
 {"age": 18}
