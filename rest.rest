@@ -25,7 +25,7 @@ POST http://localhost:8080/calibre HTTP/1.1
 Content-Type: application/json
 
 {
-    "cartridgeName": "22 Long Rifle",
+    "cartridgeName": "222222 Long Rifle",
     "calibre": ".224",
     "bulletWeight": "26",
     "muzzleVelocity": "1650",
@@ -55,7 +55,7 @@ Content-Type: application/json
     "age": 18
   }
 ###
-DELETE http://localhost:8080/calibre/63d015df4ef4af7ef51be156
+DELETE http://localhost:8080/calibre/63d1fb7ef815d49a9833d161
 Content-Type: application/json
 
 {"age": 18}
