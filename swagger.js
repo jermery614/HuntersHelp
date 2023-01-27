@@ -7,8 +7,8 @@ const doc = {
     },
     // host: 'huntershelp.onrender.com',
     // schemes: ['https'],
-    host: 'huntershelp.onrender.com',
-    schemes: ['https'],
+    host: 'localhost:8080',
+    schemes: ['http'],
 };
 
 const outputFile = './swagger.json';
