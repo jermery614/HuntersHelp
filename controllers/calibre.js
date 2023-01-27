@@ -14,6 +14,7 @@ const getAll = async (req, res, next) => {
   try {
     const result = await mongodb.getDb().db('hunters').collection('calibre').find();
   result.toArray().then((lists) => {
+
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
   });
@@ -48,6 +49,17 @@ const getSingle = async (req, res, next) => {
   }
   
 };
+
+// create USER
+// const createUser = {
+//   const users = {
+
+
+
+//   }
+//  const response = await mongodb.getDb().db("hunters").collection('calibre').insertOne(calibre);
+// }
+
 // creating contact method to add to the database.
 const createCalibre = async (req, res) => {
   const errors = validationResult(req);

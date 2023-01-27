@@ -39,12 +39,12 @@ Content-Type: application/json
 }
 ###
 
-PUT http://localhost:8080/calibre/63ccd504a03c36a0c20fc0dc HTTP/1.1
+PUT http://localhost:8080/calibre/63c71366c4a935a8d141c7ec HTTP/1.1
 Content-Type: application/json
 
 {
 
-    "cartridgeName": "6.51 Creedmore",
+    "cartridgeName": "6.5551 Creedmore",
     "calibre": ".264",
     "bulletWeight": "140",
     "muzzleVelocity": "2710",
@@ -55,7 +55,7 @@ Content-Type: application/json
     "age": 18
   }
 ###
-DELETE http://localhost:8080/calibre/63d342239a92c503b727ea45
+DELETE http://localhost:8080/calibre/63cc5d87798a4fa6a94f8c13
 Content-Type: application/json
 
 {"age": 18}

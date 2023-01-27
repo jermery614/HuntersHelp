@@ -6,9 +6,9 @@ const { ageValidation } = require('../utils/validation');
 //normal functions
 router.get('/', calibreController.getAll);
 router.get('/:id', calibreController.getSingle);
-router.post('/', calibreController.createCalibre);
-router.put('/:id', calibreController.updateCalibre);
-router.delete('/:id', calibreController.deleteCalibre);
+router.post('/', ageValidation,calibreController.createCalibre);
+router.put('/:id', ageValidation,calibreController.updateCalibre);
+router.delete('/:id',ageValidation, calibreController.deleteCalibre);
 
 // Testing Oauth
 
