@@ -85,13 +85,13 @@ Content-Type: application/json
 GET http://localhost:8080/users/63d48c881ceb278a65241756 HTTP/1.1
 Content-Type: application/json
 ###
-PUT http://localhost:8080/users/63d48c881ceb278a65241756 HTTP/1.1
+PUT http://localhost:8080/users/63d4e7a37b10e1ab90f152a2 HTTP/1.1
 Content-Type: application/json
 
 {
-    "userName": "Anna E. Wheeler",
-    "userEmail": "anna@mail.com",
-    "userAge": 35
+    "userName": "Chase A. Wheeler",
+    "userEmail": "mooch@mail.com",
+    "userAge": 14
 }
 ###
 DELETE http://localhost:8080/users/63d48b951ceb278a65241755 HTTP/1.1
