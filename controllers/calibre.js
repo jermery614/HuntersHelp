@@ -50,15 +50,6 @@ const getSingle = async (req, res, next) => {
   
 };
 
-// create USER
-// const createUser = {
-//   const users = {
-
-
-
-//   }
-//  const response = await mongodb.getDb().db("hunters").collection('calibre').insertOne(calibre);
-// }
 
 // creating contact method to add to the database.
 const createCalibre = async (req, res) => {
@@ -115,7 +106,7 @@ const updateCalibre = async (req, res) => {
   if (response.modifiedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    res.status(500).json(response.error || 'Some error occurred while updating the calibre.');
   }
 };
 

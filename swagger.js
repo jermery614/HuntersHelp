@@ -5,10 +5,10 @@ const doc = {
         title: 'Hunters Helper',
         description: 'Hunters Helper',
     },
-    // host: 'huntershelp.onrender.com',
-    // schemes: ['https'],
-    host: 'localhost:8080',
-    schemes: ['http'],
+    host: 'huntershelp.onrender.com',
+    schemes: ['https'],
+    // host: 'localhost:8080',
+    // schemes: ['http'],
 };
 
 const outputFile = './swagger.json';
