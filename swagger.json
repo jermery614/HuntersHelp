@@ -211,7 +211,7 @@
         "parameters": [
           {
             "name":"body",
-            "in":"body",
+            "in":"path",
             "schema": {
               "type":"object",
               "properties":{
