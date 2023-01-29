@@ -208,7 +208,21 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [],
+        "parameters": [
+
+          {
+            "name":"body",
+            "in":"body",
+            "schema": {
+              "type":"object",
+              "properties":{
+                "admin":{
+                  "example":"any"
+                }
+              }
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
