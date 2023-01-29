@@ -208,12 +208,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": false,
-          "type": "string"
-        },
+        "parameters": [
           {
             "name":"body",
             "in":"body",
@@ -261,6 +256,9 @@
                 },
                 "userAge": {
                   "example": "any"
+                },
+                "admin":{
+                  "example":"any"
                 }
               }
             }
