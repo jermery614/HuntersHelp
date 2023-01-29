@@ -208,9 +208,14 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [
+        "parameters": [{
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "type": "string"
+        },
           {
-            "name":"body",
+            "name":"admin",
             "in":"path",
             "schema": {
               "type":"object",
