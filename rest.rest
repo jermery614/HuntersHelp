@@ -55,10 +55,10 @@ Content-Type: application/json
     "age": 18
   }
 ###
-DELETE http://localhost:8080/calibre/63cc5d87798a4fa6a94f8c13
+DELETE http://localhost:8080/calibre/63d5ba9174015a5ea854e6f3
 Content-Type: application/json
 
-{"age": 18}
+{"admin": true}
 
 
 
@@ -94,8 +94,9 @@ Content-Type: application/json
     "userAge": 14
 }
 ###
-DELETE http://localhost:8080/users/63d48b951ceb278a65241755 HTTP/1.1
+DELETE http://localhost:8080/users/63d5b04242505bfa86ee339f HTTP/1.1
 Content-Type: application/json
+
 ###
 
 
@@ -161,5 +162,29 @@ Content-Type: application/json
 
 ###
 GET https://huntershelp.onrender.com/users HTTP/1.1
+Content-Type: application/json
+###
+GET https://huntershelp.onrender.com/users/63d4e7a37b10e1ab90f152a2 HTTP/1.1
+Content-Type: application/json
+###
+POST https://huntershelp.onrender.com/users HTTP/1.1
+Content-Type: application/json 
+
+{
+    "userName": "Chad A. smitty",
+    "userEmail": "smitty@mail.com",
+    "userAge": 49
+}
+###
+PUT https://huntershelp.onrender.com/users/63d50e059a35d0d37e650a68 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userName": "John Johnson",
+    "userEmail": "jj@email.com",
+    "userAge": 88
+}
+###
+DELETE https://huntershelp.onrender.com/users/63d50da69a35d0d37e650a67 HTTP/1.1
 Content-Type: application/json
 ###

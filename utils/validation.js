@@ -14,3 +14,10 @@ exports.ageValidation = [
  
 ]
 
+exports.isAdmin = [
+   check('admin', 'are you admin(verified by token)').not().isEmpty(),
+   check('admin', 'You need to be and administrator to alter this database.' ).custom((value)=> {
+      if (value === false) throw new Error(' You must be an administrator to alter the database, or contact admin if info is incorrect.');
+      return true
+   })
+]
