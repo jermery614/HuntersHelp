@@ -211,7 +211,7 @@
         "parameters": [{
           "name": "id",
           "in": "path",
-          "required": true,
+          "required": false,
           "type": "string"
         },
           {
