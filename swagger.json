@@ -65,6 +65,9 @@
                 },
                 "game": {
                   "example": "any"
+                },
+                "age":{
+                  "example":"any"
                 }
               }
             }
@@ -150,6 +153,9 @@
                 },
                 "game": {
                   "example": "any"
+                },
+                "age":{
+                  "example":"any"
                 }
               }
             }
