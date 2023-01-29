@@ -210,7 +210,8 @@
         ],
         "parameters": [
           {
-            
+            "name":"body",
+            "in":"body",
             "schema": {
               "type":"object",
               "properties":{
