@@ -208,25 +208,7 @@
         "produces": [
           "application/json"
         ],
-        "parameters": [{
-          "name": "id",
-          "in": "path",
-          "required": true,
-          "type": "string"
-        },
-          {
-            "name":"admin",
-            "in":"path",
-            "schema": {
-              "type":"object",
-              "properties":{
-                "admin":{
-                  "example":"any"
-                }
-              }
-            }
-          }
-        ],
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
