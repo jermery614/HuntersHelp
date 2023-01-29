@@ -182,7 +182,7 @@
             "schema": {
               "type":"object",
               "properties":{
-                "admin":{
+                "age":{
                   "example":"any"
                 }
               }
