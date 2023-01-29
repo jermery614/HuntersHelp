@@ -265,6 +265,18 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name":"body",
+            "in":"body",
+            "schema": {
+              "type":"object",
+              "properties":{
+                "admin":{
+                  "example":"any"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -302,6 +314,8 @@
                 },
                 "userAge": {
                   "example": "any"
+                },"admin":{
+                  "example":"any"
                 }
               }
             }
@@ -324,6 +338,18 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name":"body",
+            "in":"body",
+            "schema": {
+              "type":"object",
+              "properties":{
+                "admin":{
+                  "example":"any"
+                }
+              }
+            }
           }
         ],
         "responses": {
